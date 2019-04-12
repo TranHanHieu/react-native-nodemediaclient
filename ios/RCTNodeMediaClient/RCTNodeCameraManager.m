@@ -27,8 +27,9 @@ RCT_EXPORT_VIEW_PROPERTY(camera, NSDictionary);
 RCT_EXPORT_VIEW_PROPERTY(audio, NSDictionary);
 RCT_EXPORT_VIEW_PROPERTY(video, NSDictionary);
 RCT_EXPORT_VIEW_PROPERTY(denoise, BOOL);
-RCT_EXPORT_VIEW_PROPERTY(smoothSkinLevel, int);
+RCT_EXPORT_VIEW_PROPERTY(microphone, BOOL);
 
+RCT_EXPORT_VIEW_PROPERTY(smoothSkinLevel, int);
 
 RCT_EXPORT_METHOD(startprev:(nonnull NSNumber *)reactTag)
 {
@@ -80,6 +81,16 @@ RCT_EXPORT_METHOD(switchCamera:(nonnull NSNumber *)reactTag)
      [view switchCamera];
    }];
 }
+
+// RCT_EXPORT_METHOD(microphone:(nonnull NSNumber *)reactTag isMute:(BOOL)isMute)
+// {
+  
+//   [self.bridge.uiManager addUIBlock:
+//    ^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, RCTNodeCameraView *> *viewRegistry){
+//      RCTNodeCameraView *view = viewRegistry[reactTag];
+//      [view setMicrophone:isMute];
+//    }];
+// }
 
 RCT_EXPORT_METHOD(flashEnable:(nonnull NSNumber *)reactTag enable:(BOOL)enable)
 {

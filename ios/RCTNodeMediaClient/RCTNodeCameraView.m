@@ -59,6 +59,11 @@
   [_np setAudioParamBitrate:audioBitrate profile:audioProfile sampleRate:audioSamplerate];
 }
 
+- (void)setMicrophone:(BOOL)microphone {
+  _microphone = microphone;
+  [_np setAudioEnable:!microphone];
+}
+
 - (void)setVideo:(NSDictionary *)video {
   _video = video;
   int videoPreset = [[video objectForKey:@"preset"] intValue];

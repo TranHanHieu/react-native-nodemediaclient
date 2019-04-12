@@ -68,6 +68,11 @@ public class NodeCameraViewManager extends SimpleViewManager<RCTNodeCameraView> 
         view.setAudio(audioParam.getInt("bitrate"),audioParam.getInt("profile"),audioParam.getInt("samplerate"));
     }
 
+    @ReactProp(name = "microphone")
+    public void setAudioParam(RCTNodeCameraView view, boolean isMute) {
+        view.setMicrophone(isMute);
+    }
+
     @ReactProp(name = "video")
     public void setVideoParam(RCTNodeCameraView view, ReadableMap videoParam) {
         view.setVideo(videoParam.getInt("preset"),videoParam.getInt("fps"),videoParam.getInt("bitrate"),videoParam.getInt("profile"),videoParam.getBoolean("videoFrontMirror"));

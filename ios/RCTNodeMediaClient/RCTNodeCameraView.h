@@ -15,6 +15,7 @@
 @property (strong,nonatomic) NSDictionary *audio;
 @property (strong,nonatomic) NSDictionary *video;
 @property (nonatomic) BOOL denoise;
+@property (nonatomic) BOOL microphone;
 @property (nonatomic) NSInteger smoothSkinLevel;
 
 @property (nonatomic) BOOL flashEnable;
@@ -24,6 +25,5 @@
 -(int)start;
 -(int)stop;
 -(int)switchCamera;
-
 
 @end
