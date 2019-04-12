@@ -61,7 +61,7 @@
 
 - (void)setMicrophone:(BOOL)microphone {
   _microphone = microphone;
-  [_np setAudioEnable:!microphone];
+  [_np setAudioEnable:microphone];
 }
 
 - (void)setVideo:(NSDictionary *)video {

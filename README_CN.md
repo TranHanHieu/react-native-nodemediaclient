@@ -113,7 +113,7 @@ import {  NodeCameraView } from 'react-native-nodemediaclient';
   audio={{ bitrate: 32000, profile: 1, samplerate: 44100 }}
   video={{ preset: 12, bitrate: 400000, profile: 1, fps: 15, videoFrontMirror: false }}
   autopreview={true}
-  microphone={true || false}
+  microphone={true || false} // true: enable microphone, false: disable microphone
 />
 
 <Button

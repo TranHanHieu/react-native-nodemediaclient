@@ -81,7 +81,7 @@ public class RCTNodeCameraView extends NodeCameraView implements LifecycleEventL
     }
 
     public void setMicrophone(boolean isMute) {
-        mNodePublisher.setAudioEnable(!isMute);
+        mNodePublisher.setAudioEnable(isMute);
     }
 
     public void setVideo(int videoPreset, int videoFPS, int videoBitrate, int videoProfile, boolean videoFrontMirror ) {
